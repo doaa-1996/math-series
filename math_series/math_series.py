@@ -34,13 +34,22 @@ print(lucas(3))
 print(lucas(4))  
 
 
-def sum_series (x,y=0,z=1):
-    if y==0 and z==1:
-        return fibonacci(x)
-    if y==2 and z==1:
-        return lucas(x)
-    else:
-        return  sum_series(x - 1, y, z) + sum_series(x - 2, y, z)   
+# def sum_series (x,y=0,z=1):
+#     if y==0 and z==1:
+#         return fibonacci(x)
+#     if y==2 and z==1:
+#         return lucas(x)
+#     else:
+#         return  sum_series(x - 1, y, z) + sum_series(x - 2, y, z)   
+
+
+
+def sum_series(n,x=0,y=1):
+    if n==0:
+        return x
+    if n==1:
+        return y
+    return sum_series(n-1,x,y)+sum_series(n-2,x,y)
 
 
 print(sum_series(0))
@@ -54,3 +63,8 @@ print(sum_series(0,2,1))
 print(sum_series(1,2,1))
 print(sum_series(2,2,1))
 print(sum_series(3,2,1))
+
+print(sum_series(0,7,12))
+print(sum_series(1,7,12))
+print(sum_series(2,7,12))
+print(sum_series(3,7,12))
