@@ -71,3 +71,12 @@ def test_sum_series121():
 def test_sum_series221():
     assert sum_series(2,2,1) == 3
 
+
+def test_sum_series0712():
+    assert sum_series(0,7,12)==7
+
+def test_sum_series1712():
+    assert sum_series(1,7,12)==12
+
+def test_sum_series2712():
+    assert sum_series(2,7,12)==19
