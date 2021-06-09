@@ -1,6 +1,11 @@
 # 0, 1, 1, 2, 3, 5, 8, 13, ...
 # 2, 1, 3, 4, 7, 11, 18, 29, ..
 
+"""
+A recursive function returns the nth value in the fibonacci series.
+takes one argument (n)
+n: the index of the number
+"""
 
 def fibonacci(n):
     if n==0:
@@ -18,6 +23,11 @@ print(fibonacci(3))
 print(fibonacci(4))      
 
 
+"""
+A recursive function returns the nth value in the lucus series.
+takes one argument (n)
+n: the index of the number
+"""
 
 def lucas(n):
     if n==0:
@@ -33,16 +43,12 @@ print(lucas(2))
 print(lucas(3))        
 print(lucas(4))  
 
-
-# def sum_series (x,y=0,z=1):
-#     if y==0 and z==1:
-#         return fibonacci(x)
-#     if y==2 and z==1:
-#         return lucas(x)
-#     else:
-#         return  sum_series(x - 1, y, z) + sum_series(x - 2, y, z)   
-
-
+"""
+function with one required parameter and two optional parameters. 
+The required parameter will determine which element in the series to print. 
+The two optional parameters will have default values of 0 and 1 and will determine
+the first two values for the series to be produced
+"""
 
 def sum_series(n,x=0,y=1):
     if n==0:
